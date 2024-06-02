@@ -1,0 +1,187 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 2000px;
+    background-color: #ffffff;
+    font-family: 'garet-book', sans-serif;
+    overflow: hidden;
+    overflow-y: scroll; /* Permiterea derulării verticale */
+  /*scrollbar-width: none; /* Ascunderea barei de derulare (funcționează în Firefox) */
+  -ms-overflow-style: none; 
+}
+body::-webkit-scrollbar {
+  display: none; /* Ascunderea barei de derulare (funcționează în Chrome și Safari) */
+}
+.meniu {
+  position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5; /* Asigură-te că fundalul nu acoperă imaginea */
+}
+
+.linie {
+    position: absolute;
+    top: calc(6%); /* 3.5% + înălțimea imaginii + un spațiu de 10px */
+    width: 100%;
+    height: 4px; /* Grosimea liniei */
+    background-color: #9aedf5; /* Culoarea liniei */
+    z-index: 3; /* Asigură-te că linia este deasupra fundalului */
+
+}
+.fundalmic {
+    position: fixed;
+     width: 100000000px;
+     height: 7%;
+     background-color: #ffffff;
+     top: 0;
+     left: 0;
+     z-index: 4; /* Asigură-te că fundalul nu acoperă imaginea */
+     box-shadow: 0px 0.1px 3px rgb(0, 0, 0); /* Adaugă umbra exterioară */
+    /* background: linear-gradient(to bottom, #ffffff 10% , #7df4ff); /* Gradient de la alb la culoarea fundalului */
+ 
+ }
+.transparent {
+    background-color: transparent;
+    border: none;
+    color: #000000;
+    font-size: 1.5vw;
+    font-weight: normal;
+    font-family: 'garet-book', sans-serif;
+    padding: 2wv 1000w;
+    margin: 0.5vw 1vw;
+    cursor: pointer;
+    outline: solid none;
+}
+.log {
+  position: fixed;
+    top: 8px;
+    left: 96%;
+    transform: translateX(-50%);
+    z-index: 5;
+}
+
+
+
+.LOGO {
+    position: fixed;
+      top: 3.5%; /* Modifică aceste valori pentru a poziționa imaginea */
+      left: 24.8%; /* Modifică aceste valori pentru a poziționa imaginea */
+      transform: translate(-50%, -50%);
+      width: calc(14% - 20px); /* Dimensiunea logoului este de 7% din lățimea viewportului, minus 20px pentru a da spațiu de la marginea "fundal mic" */
+      max-width: 190px; /* Limitarea maximă a lățimii logoului la 190px */
+      height: auto;
+      z-index: 5; /* Asigură-te că imaginea este deasupra fundalului */
+      
+  }
+
+
+  @font-face {
+    font-family: 'garet-book';
+    src: url("garet-book-webfont.woff2") format('woff2'),
+         url("garet-book-webfont.woff") format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+.search-container {
+    position: fixed;
+      z-index: 5;
+      top: 1.5%;
+      left: 69%;
+    }
+    
+    #search-btn {
+      background-color: transparent;
+      border: none;
+      color: #57adb5;
+      font-size: 16px;
+      font-family: 'garet-book', sans-serif;
+      cursor: pointer;
+      outline: solid none;
+    }
+    
+    .imaginlupa {
+      width: 2vw;
+      height: 2vw;
+      z-index: 3;
+    }
+    
+    .search-bar {
+      position: relative;
+      top: -2.5vw;
+      left: 1.5vw;
+      width: 20vw;
+      height: 2vw;
+      background-color: transparent;
+      border: 1px solid #57adb5;
+      display: none;
+      flex-direction: row; /* Așezare orizontală a elementelor */
+      align-items: center;
+      border-radius: 50px 50px 50px 50px / 100px 100px 100px 100px; /* Aceasta specifică un raza de 50px pentru marginile din stânga și dreapta și un raza de 100px pentru marginile de sus și de jos */
+    }
+    
+    .search-bar input[type="text"] {
+      flex: 1;
+      padding: 8px;
+      border: none;
+      outline: solid none;
+      font-family: 'garet-book', sans-serif;
+      background-color: transparent;
+    }
+    
+    #close-btn {
+      background-color: transparent;
+      border: none;
+      padding: 8px 12px;
+      cursor: pointer;
+      margin-left: auto;
+      font-family: 'garet-book', sans-serif;
+    }
+    
+    #close-btn:hover {
+      background-color: #999;
+      border-radius: 50px 50px 50px 50px / 100px 100px 100px 100px; /* Aceasta specifică un raza de 50px pentru marginile din stânga și dreapta și un raza de 100px pentru marginile de sus și de jos */
+  
+    }
+    
+    #search-btn:focus + .search-bar {
+      display: flex; /* Arată bara de căutare când butonul de căutare primește focus */
+    }
+    
+    #close-btn:focus {
+      display: none; /* Ascunde butonul de închidere atunci când primește focus */
+    }
+    #fake-input {
+      position: absolute;
+      opacity: 0;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      pointer-events: all; /* Permite click-urile să treacă prin inputul invizibil */
+    }
+ .pozaFAC {
+    width: 100vw;
+    height: auto;
+ }
+ .gradientimg {
+    position: absolute;
+    width: 100000000px;
+    height: 30%;
+    background-color: #ffffff;
+    top: 34vw;
+    left: 0;
+    z-index: 3; /* Asigură-te că fundalul nu acoperă imaginea */
+   background: linear-gradient(to top, #ffffff 65% , transparent );
+ }
+
+ .numeFac {
+    position: absolute;
+    top: 84%;
+    text-align:  center;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    z-index: 3;     
+    font-family: 'garet-book', sans-serif; /* Utilizează fontul 'garet-book', iar dacă acesta nu este disponibil, folosește o fontă generică sans-serif */
+    font-size: 3vw;
+}
